@@ -2,7 +2,7 @@
 @section('home')
  
   
-<div class="breadcrumbs">
+{{-- <div class="breadcrumbs">
     <div class="col-sm-4">
         <div class="page-header float-left">
             <div class="page-title">
@@ -19,8 +19,8 @@
             </div>
         </div>
     </div>
-</div>
-
+</div> --}}
+{{-- <h3>{{session('data')['username']}}</h3> --}}
 <div class="content mt-3">
 
     
@@ -296,7 +296,78 @@
     </div> --}}
 
   
-     
+    <footer class="twt-footer">
+        <a href="#"><i class="fa fa-camera"></i></a>
+        <a href="#"><i class="fa fa-map-marker"></i></a>
+        New Castle, UK
+        <span class="pull-right">
+            32
+        </span>
+    </footer>
+    </section>
+    </div>
+    
+    
+    <div class="col-xl-3 col-lg-6">
+    <div class="card">
+    <div class="card-body">
+        <div class="stat-widget-one">
+            <div class="stat-icon dib"><i class="ti-money text-success border-success"></i></div>
+            <div class="stat-content dib">
+                <div class="stat-text">Total Profit</div>
+                <div class="stat-digit">1,012</div>
+            </div>
+        </div>
+    </div>
+    </div>
+    </div>
+    
+    
+    <div class="col-xl-3 col-lg-6">
+    <div class="card">
+    <div class="card-body">
+        <div class="stat-widget-one">
+            <div class="stat-icon dib"><i class="ti-user text-primary border-primary"></i></div>
+            <div class="stat-content dib">
+                <div class="stat-text">New Customer</div>
+                <div class="stat-digit">961</div>
+            </div>
+        </div>
+    </div>
+    </div>
+    </div>
+    
+    <div class="col-xl-3 col-lg-6">
+    <div class="card">
+    <div class="card-body">
+        <div class="stat-widget-one">
+            <div class="stat-icon dib"><i class="ti-layout-grid2 text-warning border-warning"></i></div>
+            <div class="stat-content dib">
+                <div class="stat-text">Active Projects</div>
+                <div class="stat-digit">770</div>
+            </div>
+        </div>
+    </div>
+    </div>
+    </div>
+    
+    {{-- <div class="col-xl-6">
+    <div class="card">
+    <div class="card-header">
+        <h4>World</h4>
+    </div>
+    <div class="Vector-map-js">
+        <div id="vmap" class="vmap" style="height: 265px;"></div>
+    </div>
+    </div>
+    <!-- /# card -->
+    </div> --}}
+    
+    
+    </div> <!-- .content -->
+    </div><!-- /#right-panel -->
+    
+    <!-- Right Panel -->
            
                 
 @endsection

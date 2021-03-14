@@ -16,7 +16,7 @@ class LoginController extends Controller
 
         if (!empty($data)) {
 
-            $data=$req->session()->get('users');
+           $req->session()->put('data',$req->input());
                 
 
                 return view('home');
@@ -30,7 +30,7 @@ class LoginController extends Controller
 
     function logout()
     {
-        session()->flush();
+        session()->forget('data');
         return view('login/form');
     }
 }

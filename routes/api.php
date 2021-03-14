@@ -20,5 +20,5 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 });
 
 
-Route::post("addStudent","StudentController@addStudent");
-Route::get("listdata","StudentController@listdata");
+Route::post("addStudent", "StudentController@addStudent");
+Route::get("listdata", "StudentController@listdata");

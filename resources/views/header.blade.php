@@ -14,7 +14,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <link rel="apple-touch-icon" href="apple-icon.png">
-    <link rel="shortcut icon" href="favicon.ico">
+    {{-- <link rel="shortcut icon" href="favicon.ico"> --}}
+    <link rel="shortcut icon" href="public/images/adminlogo.png">
+
 
     <link rel="stylesheet" href="{{ url('public/vendors/bootstrap/dist/css/bootstrap.min.css') }}">
     <link rel="stylesheet" href="{{ url('public/vendors/font-awesome/css/font-awesome.min.css') }}">
@@ -53,7 +55,7 @@
             <div id="main-menu" class="main-menu collapse navbar-collapse">
                 <ul class="nav navbar-nav">
                     <li class="active">
-                        <a href="index.html"> <i class="menu-icon fa fa-dashboard"></i>Dashboard </a>
+                        <a href="{{url('')}}"> <i class="menu-icon fa fa-dashboard"></i>Dashboard </a>
                     </li>
                     <h3 class="menu-title">UI elements</h3><!-- /.menu-title -->
                     <li class="menu-item-has-children dropdown">
@@ -78,7 +80,7 @@
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true"
                             aria-expanded="false"> <i class="menu-icon fa fa-table"></i>Tables</a>
                         <ul class="sub-menu children dropdown-menu">
-                            <li><i class="fa fa-table"></i><a href="tables-basic.html">Basic Table</a></li>
+                            <li><i class="fa fa-table"></i><a href="{{url('student_table')}}">Student Table</a></li>
                             <li><i class="fa fa-table"></i><a href="tables-data.html">Data Table</a></li>
                         </ul>
                     </li>
@@ -153,6 +155,9 @@
         <header id="header" class="header">
 
             <div class="header-menu">
+                <div class="col-sm-12">
+                <a id="menuToggle" class="menutoggle pull-left"><i class="fa fa fa-tasks"></i></a>
+                
                 {{-- <div class="col-sm-7">
                     <a id="menuToggle" class="menutoggle pull-left"><i class="fa fa fa-tasks"></i></a>
                     <div class="header-left">
@@ -247,20 +252,21 @@
                 
                 
                     <div class="user-area dropdown float-right">
+                        
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true"
                             aria-expanded="false">
                             <img class="user-avatar rounded-circle" src="public/images/admin.jpg" alt="User Avatar">
                         </a>
 
                         <div class="user-menu dropdown-menu">
-                            <a class="nav-link" href="#"><i class="fa fa-user"></i> My Profile</a>
+                        <li>  <a class="dropdown" href="#"><i class="fa fa-user"></i> My Profile</a></li>
 
-                            <a class="nav-link" href="#"><i class="fa fa-user"></i> Notifications <span
-                                    class="count">13</span></a>
+                            <li><a class="dropdown" href="#"><i class="fa fa-user"></i> Notifications <span
+                                    class="count">13</span></a></li>
 
-                            <a class="nav-link" href="#"><i class="fa fa-cog"></i> Settings</a>
+                                    
 
-                            <a class="nav-link" href="{{url('logout')}}"><i class="fa fa-power-off"></i> Logout</a>
+                                        <li> <a class="dropdown" href="{{url('logout')}}"><i class="fa fa-power-off"></i> Logout</a></li>
                         </div>
                     </div>
                 
@@ -269,8 +275,27 @@
 
                 </tr>
                 </table>
+                </div>
             
             </div>
 
         </header><!-- /header -->
         <!-- Header-->
+        <div class="breadcrumbs">
+            <div class="col-sm-4">
+                <div class="page-header float-left">
+                    <div class="page-title">
+                        <h1>Dashboard</h1>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-8">
+                <div class="page-header float-right">
+                    <div class="page-title">
+                        <ol class="breadcrumb text-right">
+                            <li class="active">Dashboard</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        </div>
