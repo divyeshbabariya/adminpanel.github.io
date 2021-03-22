@@ -1,4 +1,6 @@
 @include('header')
 @yield('home')
 @yield('student_table')
+@yield('student_form')
+@yield('update_student')
 @include('footer')

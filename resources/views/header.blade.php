@@ -88,7 +88,7 @@
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true"
                             aria-expanded="false"> <i class="menu-icon fa fa-th"></i>Forms</a>
                         <ul class="sub-menu children dropdown-menu">
-                            <li><i class="menu-icon fa fa-th"></i><a href="forms-basic.html">Basic Form</a></li>
+                            <li><i class="menu-icon fa fa-th"></i><a href="{{url('student_form')}}">Student Form</a></li>
                             <li><i class="menu-icon fa fa-th"></i><a href="forms-advanced.html">Advanced Form</a></li>
                         </ul>
                     </li>
@@ -255,7 +255,7 @@
                         
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true"
                             aria-expanded="false">
-                            <img class="user-avatar rounded-circle" src="public/images/admin.jpg" alt="User Avatar">
+                            <img class="user-avatar rounded-circle" src="public/images/admin.png" alt="User Avatar">
                         </a>
 
                         <div class="user-menu dropdown-menu">
@@ -281,7 +281,7 @@
 
         </header><!-- /header -->
         <!-- Header-->
-        <div class="breadcrumbs">
+        {{-- <div class="breadcrumbs">
             <div class="col-sm-4">
                 <div class="page-header float-left">
                     <div class="page-title">
@@ -298,4 +298,4 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div> --}}

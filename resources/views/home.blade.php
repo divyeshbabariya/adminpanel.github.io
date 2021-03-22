@@ -2,7 +2,7 @@
 @section('home')
  
   
-{{-- <div class="breadcrumbs">
+<div class="breadcrumbs">
     <div class="col-sm-4">
         <div class="page-header float-left">
             <div class="page-title">
@@ -10,7 +10,7 @@
             </div>
         </div>
     </div>
-    <div class="col-sm-8">
+    {{-- <div class="col-sm-8">
         <div class="page-header float-right">
             <div class="page-title">
                 <ol class="breadcrumb text-right">
@@ -18,8 +18,8 @@
                 </ol>
             </div>
         </div>
-    </div>
-</div> --}}
+    </div> --}}
+</div>
 {{-- <h3>{{session('data')['username']}}</h3> --}}
 <div class="content mt-3">
 

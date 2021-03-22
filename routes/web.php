@@ -46,4 +46,12 @@ Route::view('home', function () {
 
 Route::post("loginAdmin", "LoginController@loginAdmin");
 Route::get('logout', 'LoginController@logout');
+
 Route::get("student_table", 'StudentController@student_table');
+Route::get("delete{s_id}","StudentController@delete_student");
+Route::post("add","StudentController@add");
+
+Route::get("update{s_id}","StudentController@show_update_data");
+Route::post("update","StudentController@update_student");
+
+Route::view("student_form","student/student_form");
