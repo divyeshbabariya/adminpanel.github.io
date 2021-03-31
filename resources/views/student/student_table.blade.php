@@ -27,20 +27,16 @@
                     {{-- <td>{{$student['l_name']}}</td> --}}
                     <td>{{$student['email']}}</td>
                     <td>{{$student['mobile_no']}}</td>
-                    <td>{{$student['image']}} </td>
-                    <td><a href={{ "update".$student['s_id'] }}><p class="text-primary"><span class="ti-pencil"></p></a></td>
-                    <td><a href={{ "delete".$student['s_id'] }}><p class="text-danger"><span class="ti-trash"></span></p></a></td>
+                    <td><img src='{{url("public/images/photo/student/$student->image")}}' style="height: 40px; width:45px;border-radius: 30%;"></td>
+                    <td align="center"><a href={{ "update".$student['s_id'] }}><h4 class="text-primary"><span class="ti-pencil"></h4></a></td>
+                    <td align="center"><a href={{ "delete".$student['s_id'] }}><h4 class="text-danger"><span class="ti-trash"></span></h4></a></td>
                 </tr>    
                 @endforeach
-                
-
-
-
-
-                
+                                
               
             </tbody>
         </table>
+        <div>{{$students->links()}}</div>
 
     </div>
 </div>

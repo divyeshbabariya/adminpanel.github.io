@@ -42,9 +42,11 @@
                     </div>
                 </div>
                 <h4 class="mb-0">
-                    <span class="count">10468</span>
+                    
+                    <span class="count">{{$count_student}}</span>
+                    
                 </h4>
-                <p class="text-light">Members online</p>
+                <p class="text-light">Total Students</p>
 
                 <div class="chart-wrapper px-0" style="height:70px;" height="70">
                     <canvas id="widgetChart1"></canvas>

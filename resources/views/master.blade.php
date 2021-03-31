@@ -3,4 +3,5 @@
 @yield('student_table')
 @yield('student_form')
 @yield('update_student')
+@yield('userform')
 @include('footer')

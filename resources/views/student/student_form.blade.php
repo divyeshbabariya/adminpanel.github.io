@@ -8,7 +8,7 @@
         <div class="card-body">
           
 
-            <form method="POST" action="{{ url('add') }}">
+            <form method="POST" action="{{ url('add') }}" enctype="multipart/form-data">
                 @csrf
                 <table class="table table-hover">
                     <tr>

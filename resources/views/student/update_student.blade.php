@@ -52,7 +52,11 @@
                     <td><input class="form-control" type="file" name="image" placeholder="Uplode image" value="{{$updatedata['image']}}">
                         <h6 class="text-danger">
                             {{ $errors->first('image') }}
-                        </h6></td>
+                        </h6>
+                        {{-- <img src="storage/app/img/{{$image}}" alt="Girl in a jacket" width="100" height="100"> --}}
+                
+                    </td>
+                        
          
                 </tr>
             </table>
