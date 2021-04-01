@@ -13,7 +13,7 @@
                 <table class="table table-hover">
                     <tr>
                         <td><label>First Name :</label></td>
-                        <td><input class="form-control" type="text" name="f_name" placeholder="Enter First Name">
+                        <td><input class="form-control" type="text" name="f_name" placeholder="Enter First Name" autofocus>
                            
                            <h6 class="text-danger">
                             {{ $errors->first('f_name') }}
@@ -31,7 +31,7 @@
                     </tr>
                     <tr>
                         <td><label>E-mail :</label></td>
-                        <td> <input class="form-control " type="text" name="email" placeholder="Enter E-mail">
+                        <td> <input class="form-control " type="text" name="email" placeholder="abcd@jgmail.com">
                             <h6 class="text-danger">
                             {{ $errors->first('email') }}
                         </h6>
@@ -48,7 +48,7 @@
                     </tr>
                     <tr>
                         <td><label>Mobile No :</label></td>
-                        <td><input class="form-control" type="tel" name="mobile_no" placeholder="Enter mobile Number">
+                        <td><input class="form-control" type="tel" name="mobile_no" placeholder="00000-00000" maxlength="10">
                             <h6 class="text-danger">
                             {{ $errors->first('mobile_no') }}
                         </h6>

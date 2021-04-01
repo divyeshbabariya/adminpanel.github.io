@@ -8,7 +8,7 @@ use Illuminate\Support\Facades\Validator;
 
 class StudentController extends Controller
 {
-    //API
+    //`````````````````````````API add student````````````````````````````
     function addStudent(Request $req)
     {
 
@@ -46,7 +46,7 @@ class StudentController extends Controller
                     "email" => "$req->email",
                     "password" => "$req->password",
                     "mobile_no" => "$req->mobile_no",
-                    
+
 
 
                 ]);
@@ -55,40 +55,35 @@ class StudentController extends Controller
             }
         }
     }
+    //````````````````````````Api list all data``````````````````````````````````
 
-    //API
     function listdata()
     {
 
         return student::all();
     }
-
+    //````````````````````````````show student table``````````````````````````
 
     function student_table()
     {
 
-        $data = student::paginate(7);
+        $data = student::paginate(6);
         return view('student/student_table', ["students" => $data]);
     }
+    //````````````````````````delete student`````````````````````````````````
 
     function delete_student($s_id)
     {
-        // $data = student::find($s_id);
-        // //echo "$data"
-        // $data->delete();
-        // return redirect("student_table");
-        
         $data = student::find($s_id);
-    
-        		$Path ='public/images/photo/student/'.$data->image;
-        		unlink($Path);
-    
-        student::where('s_id',$data->s_id)->delete();
-        	$data->delete();
-            return redirect("student_table");
-        
-    }
 
+        $Path = 'public/images/photo/student/' . $data->image;
+        unlink($Path);
+
+        student::where('s_id', $data->s_id)->delete();
+        $data->delete();
+        return redirect("student_table");
+    }
+    //``````````````````````add student from admin site```````````````````````````````````
     function add(Request $req)
     {
         $this->validate($req, [
@@ -125,7 +120,7 @@ class StudentController extends Controller
                 $new_file = "student_." . $s_max . "." . $pic->getClientOriginalExtension();
             }
             $pic->move("public/images/photo/student", $new_file);
-            
+
             $student->image = $new_file;
             if ($student->save()) {
                 $status = ['message' => "Inserted Successfully", 'status' => 1];
@@ -135,14 +130,14 @@ class StudentController extends Controller
         }
         return view('student/student_form');
     }
-
+    //```````````````````````````show student data which  will  be update````````````````````````
     function show_update_data($s_id)
     {
 
         $data = student::find($s_id);
         return view("student/update_student", ['updatedata' => $data]);
     }
-
+    //```````````````````````````update student data```````````````````````````````
     function update_student(Request $req)
     {
         $this->validate($req, [
@@ -189,14 +184,12 @@ class StudentController extends Controller
             echo "Error";
         }
     }
+}
 
 
 
 
-
-
-
-    // public function destroy(Request $request)
+  // public function destroy(Request $request)
     // {
     // 	$objProperty=Property::find($request->id);
 
@@ -206,4 +199,3 @@ class StudentController extends Controller
     // 	PropertyGallary::where('property_id',$objProperty->id)->delete();
     // 	$objProperty->delete();
     // }
-}

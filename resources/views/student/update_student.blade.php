@@ -42,7 +42,7 @@
                 </tr>
                 <tr>
                     <td><label >Mobile No :</label></td>
-                    <td><input class="form-control" type="tel" name="mobile_no" placeholder="Enter mobile Number" value="{{$updatedata['mobile_no']}}">
+                    <td><input class="form-control" type="tel" name="mobile_no" placeholder="Enter mobile Number" value="{{$updatedata['mobile_no']}} maxlength="10>
                         <h6 class="text-danger">
                             {{ $errors->first('mobile_no') }}
                         </h6></td>
